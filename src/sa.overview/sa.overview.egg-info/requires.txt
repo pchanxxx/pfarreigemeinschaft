@@ -1,0 +1,5 @@
+setuptools
+plone.app.dexterity
+plone.namedfile [blobs]
+plone.app.theming
+z3c.jbot

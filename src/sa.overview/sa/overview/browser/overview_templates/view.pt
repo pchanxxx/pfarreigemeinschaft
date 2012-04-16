@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="sa.overview">
+<body>
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading" tal:content="context/title" />
+        
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <p class="documentDescription" tal:content="context/description" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <tal:content tal:condition="view/has_ovcontent">
+            <tal:block tal:repeat="item view/contained_ovcontent">
+                <tal:item tal:define="item_obj item/getObject;">
+                <div id="ov-block">
+                    <div class="row">
+                    
+                    <div class="cell position-0 width-2:3">
+                    <div id="ov-content">
+                        <div id="ov-header">
+                            <h2 tal:content="item/Title">
+                            Title
+                            </h2>
+                        </div>
+                        <div id="ov-meat">
+                            <p tal:condition="item_obj/preview"
+                                tal:content="structure item_obj/preview">Test Preview</p>
+                            <p tal:condition="not:item_obj/preview" tal:content="item/Description">
+                            Subtitle
+                            </p>
+                            <a href="" tal:attributes="href item_obj/absolute_url">
+                                MEHR </a>                        
+                        </div>
+                    </div>
+                    </div>
+                    <div id="pic" class="cell position-2:3 width-1:3">
+                    <div id="ov-image">
+                        <img tal:define="scale item_obj/@@images"
+                            tal:replace="structure python:scale.scale('image',
+                                         width=200, height=200, direction='keep').tag()" />                        
+                    </div>
+                    </div>
+
+                    <div class="visualClear"><!-- --></div>
+                    </div>
+                </div>
+                </tal:item>
+            </tal:block>
+        </tal:content>        
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

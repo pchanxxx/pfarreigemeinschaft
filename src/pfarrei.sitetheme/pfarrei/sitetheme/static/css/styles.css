@@ -45,6 +45,7 @@ h1 {
 }
 h2 {
     font-size: 1.75em;
+
 }
 h3 {
     font-size: 1.25em;
@@ -332,16 +333,25 @@ html, body {
     display: inline-block;
 } 
 
+.navTreeItemInPath {
+    background: #933389;
+}
+
+.navTreeItem .navTreeItemInPath span{
+    background: #933389;
+    color: #fff;
+}
+
 .navTreeItem span {
     color: #000;
-    padding: 5px;
+    padding: 10px 10px 10px 20px;
     background-color: #dbdbdb;
     display: inline-block; 
 } 
 
 .navTreeCurrentNode span{
     background: #fff;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px 10px 20px;
     margin-top: 5px;
     display:block;
 }
@@ -349,7 +359,8 @@ html, body {
 .navTreeCurrentItem span{
     background: #933389; 
     margin-top: 3px;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px 10px 20px;
+    color: #fff;
 }
 
 .navTreeLevel1 span{
@@ -368,7 +379,7 @@ html, body {
 }
 
 #sidebar-right .portletNews {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 #sidebar-right dl.portletNews p,
 dl.portletNews {
@@ -384,7 +395,7 @@ dl.portletNews dt.portletHeader  {
     color: #e2ae1c;
     font-size: 1.8em;
     font-family: times;
-    border-bottom:1px solid #a3a3a3;
+    border-bottom:1px solid #d7d7d7;
 }
 
 #sidebar-right dl.portletNews p,
@@ -392,6 +403,7 @@ dl.portletNews dd.portletItem span {
     display: inline-block;
     width:200px;
     word-wrap: break-word;
+    margin-top: 10px;
 
 }
 
@@ -401,7 +413,19 @@ dd.portletItem a {
     display: block;
     text-indent: -3000px;
     overflow: hidden;
-    height: 50px;
+    margin-top: 10px;
+    height: 20px;
+    width: 150px;
+}
+
+#sidebar-right dl.portletEvents
+dd.portletFooter a {
+    background: url(../images/more.png) 0px 0px no-repeat transparent;
+    display: block;
+    text-indent: -3000px;
+    overflow: hidden;
+    margin-top: 10px;
+    height: 20px;
     width: 150px;
 }
 
@@ -420,7 +444,7 @@ dl.portletEvents dt.portletHeader {
     color: #e2ae1c;
     font-size: 1.8em;
     font-family: times;
-    border-bottom:1px solid #a3a3a3;    
+    border-bottom:1px solid #d7d7d7;    
 } 
 
 #sidebar-right dl.portletEvents p,
@@ -609,7 +633,8 @@ dl.portlet {
 }
 
 #content h1.documentFirstHeading  {
-    visibility: hidden;
+    color: #933389;
+    /*visibility: hidden;*/
 }
 #content .tileItem .tileHeadline a {
     background: url(../images/icon.png) 0px 5px no-repeat transparent;
@@ -619,13 +644,47 @@ dl.portlet {
     padding-left: 40px;
     padding-top: 10px;
 }
+.template-view #content #ov-block #ov-content #ov-header {
+        border-bottom: 5px solid #dfdfdf;
+        width: 435px;
+}
+.template-view #content #ov-block #ov-content #ov-header h2 {
+    background: url(../images/icon.png) 0px 5px no-repeat transparent;
+    color: #933389;
+    font-weight: lighter;
+    font-family: times;
+    padding-left: 40px;
+    padding-top: 10px;
+}
 
+.template-view #content #ov-block {
+    margin-top: -25px;
+
+}
+
+.template-view #content #ov-block #ov-content{
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 30px;
+   
+}
+.template-view #content #ov-block #pic {
+    margin-top: 60px;
+}
 #content .tileFooter a {
     color: #e2ae1c;
     background: url(../images/arrow.png) 50px 5px no-repeat transparent;
     padding-right: 20px;
 }
 
+.template-view #content #ov-block #ov-content #ov-meat a {
+    color: #e2ae1c;
+    background: url(../images/arrow.png) 45px 5px no-repeat transparent;
+    padding-right: 20px;  
+}
+
+.template-view #content #ov-block #ov-content #ov-meat {
+    margin-bottom: 20px;
+}
 #content a {
 
 

@@ -59,6 +59,9 @@
 	    <drop css:content="span.portletTopRight" />
 	    <drop css:content="span.portletBottomLeft" />
 	    <drop css:content="span.portletBottomRight" />
+        <drop css:content="a.state-published img" />
+
+ 
 
     </rules>
     
