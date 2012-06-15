@@ -26,6 +26,12 @@
             <drop theme="/html/head/script" />
             <drop theme="/html/head/link" />
         
+                <!-- Make plone.app.toolbar working on your style !!!-->
+        <append theme="/html/body" content="//div[@data-iframe='toolbar']" />
+        <append theme="/html/head">
+        	<script type="text/javascript" src="++resource++plone.app.toolbar/src/iframed.js">
+        	</script>
+        </append>
         <!-- Add favicon
             <after theme-children="/html/head">
                 <link rel="shortcut icon" href="/++theme++example.sitetheme/images/favicon.ico" type="image/x-icon" />

@@ -29,7 +29,8 @@ setup(name='pfarrei.sitetheme',
           'plone.app.dexterity',
           'plone.namedfile [blobs]',
           'plone.app.theming',
-          'z3c.jbot',
+          'plone.app.themingplugins',
+
           # -*- Extra requirements: -*-
       ],
       entry_points="""
