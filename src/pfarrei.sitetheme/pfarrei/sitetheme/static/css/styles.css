@@ -1894,6 +1894,23 @@ div.overlay .formControls a {
 
 }
 
+#footer-wrapper #footer #kontaktbar {
+  margin-top: -20px;
+  margin-bottom: 20px;
+
+  text-align: right;
+
+}
+#footer-wrapper #footer #kontaktbar li {
+  font-size: 90%;
+  color: #fff;
+}
+#footer-wrapper #footer #kontaktbar li a {
+  color: #fff;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+
 #push {
 /* Sticky footer */
 	height: 16em;
